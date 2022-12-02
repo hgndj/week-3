@@ -1,0 +1,14 @@
+%option noyywrap
+%{
+#include&lt;stdio.h&gt;
+%}
+%%
+[aeiouAEIOU]+ {printf(&quot;vowel\n&quot;);}
+[a-zA-Z] {printf(&quot;consonant\n&quot;);}
+%%
+int main()
+{
+printf(&quot;Enter a character:&quot;);
+yylex();
+return 0;
+}
